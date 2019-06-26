@@ -14,6 +14,7 @@ export namespace Components {
     'name': string;
     'result': string;
   }
+  interface YooMapGl {}
 }
 
 declare global {
@@ -24,8 +25,15 @@ declare global {
     prototype: HTMLMyComponentElement;
     new (): HTMLMyComponentElement;
   };
+
+  interface HTMLYooMapGlElement extends Components.YooMapGl, HTMLStencilElement {}
+  var HTMLYooMapGlElement: {
+    prototype: HTMLYooMapGlElement;
+    new (): HTMLYooMapGlElement;
+  };
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
+    'yoo-map-gl': HTMLYooMapGlElement;
   }
 }
 
@@ -35,9 +43,11 @@ declare namespace LocalJSX {
     'name'?: string;
     'result'?: string;
   }
+  interface YooMapGl extends JSXBase.HTMLAttributes<HTMLYooMapGlElement> {}
 
   interface IntrinsicElements {
     'my-component': MyComponent;
+    'yoo-map-gl': YooMapGl;
   }
 }
 
