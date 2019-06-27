@@ -4,7 +4,7 @@ const mapboxgl = (window as any).mapboxgl;
 
 @Component({
   tag: 'yoo-map-gl',
-  styleUrl: 'map-gl.css',
+  styleUrl: 'map-gl.scss',
   shadow: true
 })
 export class YooMapGlComponent {
