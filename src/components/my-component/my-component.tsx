@@ -1,6 +1,6 @@
 import { Component, Prop, h, Element } from '@stencil/core';
-import { LoginFocusAnimation } from '../../utils';
-
+import { isCordova } from '../../utils';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.scss',
@@ -14,15 +14,9 @@ export class MyComponent {
   @Element() host: HTMLMyComponentElement;
 
   componentDidLoad() {
-    this.playAnimation();
-  }
-
-  playAnimation() {
-    let focusAnimation = new LoginFocusAnimation();
-    let elements = (this.host.shadowRoot || this.host).querySelector('.name');
-    console.log("TCL: MyComponent -> playAnimation -> elements", elements)
-    focusAnimation.addContainer(elements);
-    focusAnimation.playFocus();
+    if (isCordova()) {
+      ScreenOrientation.unlock();
+    }
   }
 
   render() {
