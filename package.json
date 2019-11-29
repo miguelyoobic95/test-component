@@ -30,6 +30,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@ionic-native/screen-orientation": "5.17.1",
+    "@ionic-native/screen-orientation": "5.17.1"
   }
 }
