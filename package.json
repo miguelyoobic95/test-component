@@ -28,5 +28,7 @@
     "rollup-plugin-node-globals": "1.4.0"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "node-polyglot": "^2.4.0"
+  }
 }
