@@ -24,9 +24,12 @@
   "devDependencies": {
     "@stencil/core": "1.9.0-9",
     "@stencil/sass": "1.1.1",
+    "@types/file-saver": "^2.0.1",
     "rollup-plugin-node-builtins": "2.1.2",
     "rollup-plugin-node-globals": "1.4.0"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "file-saver": "2.0.2"
+  }
 }

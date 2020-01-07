@@ -1,7 +1,9 @@
-import { Component, Prop, h, Element } from '@stencil/core';
+import { Component, Prop, h, Element } from "@stencil/core";
+import { saveAs } from "file-saver";
+
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.scss',
+  tag: "my-component",
+  styleUrl: "my-component.scss",
   shadow: true
 })
 export class MyComponent {
@@ -11,8 +13,16 @@ export class MyComponent {
 
   @Element() host: HTMLMyComponentElement;
 
+  componentDidLoad() {
+    saveAs("", "");
+  }
 
   render() {
-    return <div class="name">Hello. My name is {this.name}. You {this.action}. Prepare to {this.result}.</div>;
+    return (
+      <div class="name">
+        Hello. My name is {this.name}. You {this.action}. Prepare to{" "}
+        {this.result}.
+      </div>
+    );
   }
 }
