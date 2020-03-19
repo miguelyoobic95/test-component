@@ -28,5 +28,7 @@
     "rollup-plugin-node-globals": "1.4.0"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "he": "^1.2.0"
+  }
 }
