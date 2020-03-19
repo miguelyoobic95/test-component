@@ -1,4 +1,6 @@
 import { Component, Prop, h, Element } from '@stencil/core';
+import he from 'he';
+
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.scss',
@@ -13,6 +15,8 @@ export class MyComponent {
 
 
   render() {
+    he.encode('foo \0 bar');
+
     return <div class="name">Hello. My name is {this.name}. You {this.action}. Prepare to {this.result}.</div>;
   }
 }
